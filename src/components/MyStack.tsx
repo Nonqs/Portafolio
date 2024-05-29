@@ -16,39 +16,44 @@ import nest from "../public/nestjs.svg"
 import next from "../public/next.svg"
 import nodejs from "../public/nodejs.svg"
 import react from "../public/react.svg"
+import { useRef } from "react"
+import { useIntersectionObserver } from '../hook/IntersectionObserver';
 
 
 export default function Stack() {
 
+    const stackRef = useRef(null)
+    const isVisible = useIntersectionObserver(stackRef)
+
     const svgs = [css, html, js, ts, react, next, nodejs, express, nest, git, github, mysql, prisma, tailwind, bootstrap, vercel, vscode]
-    const LearningNowSvgs = [mongo]
+    const learningNowSvgs = [mongo]
 
     return (
-        <div className="w-1/3 ms-5">
-            <div>
-                <h5 className="text-[#01c38d] text-4xl font-semibold p-2 border-animated-right">
-                    You don't have to worry, I've got you covered
+        <div ref={stackRef} className="w-1/3 ms-5">
+            <div className="h-2/3">
+                <h5 className={`text-[#01c38d] text-4xl mb-2 font-semibold p-2 border-animated-right w-full ${isVisible ? 'animate-border-right' : ''}`}>
+                    My stack
                 </h5>
-                <article className="flex flex-wrap mt-2">
+                <article className={`flex flex-wrap ${isVisible ? 'animate-fade-in' : ''}`}>
                     {svgs.map((svg, index) => (
                         <img
                             key={index}
-                            className="w-10 p-1 bg-white shadow-inner me-2 mb-2 rounded-xl hover:drop-shadow-2xl"
+                            className={`w-12 p-1 bg-white shadow-inner me-2 mb-2 rounded-xl hover:drop-shadow-2xl`}
                             src={svg}
                             alt=""
                         />
                     ))}
                 </article>
             </div>
-            <div>
-                <h5 className="text-[#01c38d] text-4xl font-semibold p-2 border-animated-right">
+            <div className="h-1/3">
+                <h5 className={`text-[#01c38d] mb-2 text-4xl font-semibold p-2 border-animated-right ${isVisible ? 'animate-border-right' : ''}`}>
                     Learning now
                 </h5>
-                <article className="flex flex-wrap mt-2">
-                    {LearningNowSvgs.map((svg, index) => (
+                <article className={`flex flex-wrap ${isVisible ? 'animate-fade-in' : ''}`}>
+                    {learningNowSvgs.map((svg, index) => (
                         <img
                             key={index}
-                            className="w-10 p-1 bg-white shadow-inner me-2 mb-2 rounded-xl hover:drop-shadow-2xl"
+                            className={`w-12 p-1 bg-white shadow-inner me-2 mb-2 rounded-xl hover:drop-shadow-2xl`}
                             src={svg}
                             alt=""
                         />
@@ -56,5 +61,5 @@ export default function Stack() {
                 </article>
             </div>
         </div>
-    );
+    )
 }
