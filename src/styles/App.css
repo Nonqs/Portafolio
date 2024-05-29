@@ -3,8 +3,8 @@
         width: 0;
     }
 
-    45%,
-    55% {
+    42%,
+    57% {
         width: 100%;
     }
 
@@ -20,24 +20,25 @@
 }
 
 .animate-span {
-    animation: typing 6000ms steps(17), blink .5s infinite step-end alternate;
+    animation: typing 4100ms steps(16), blink .5s infinite step-end alternate;
     overflow: hidden;
 }
 
 .animate-span2 {
-    animation: typing 8000ms steps(19), blink .5s infinite step-end alternate;
+    animation: typing 5000ms steps(18), blink .5s infinite step-end alternate;
     overflow: hidden;
 }
 
 .animate-span3 {
-    animation: typing 10000ms steps(28), blink .5s infinite step-end alternate;
+    animation: typing 8000ms steps(28), blink .5s infinite step-end alternate;
     overflow: hidden;
 }
+
 
 .Btn {
     width: 45px;
     height: 45px;
-    background: linear-gradient(#44ea76, #39fad7);
+    background: linear-gradient(#01c38d, #39fad7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,4 +88,67 @@
 
 .navbar-transition {
     transition: all 0.3s ease-in-out;
+}
+
+@keyframes border-expand {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.border-animated {
+    display: inline-block;
+    /* Necesario para animar el borde inferior */
+    position: relative;
+    /* Necesario para el pseudoelemento */
+}
+
+.border-animated::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Ajusta el grosor del borde */
+    background-color: #01c38d;
+    /* Color del borde */
+    animation: border-expand 2s ease-in-out forwards;
+    /* Duración y tipo de animación */
+}
+
+@keyframes border-expand-right-to-left {
+    0% {
+        width: 0;
+        right: 0;
+    }
+
+    100% {
+        width: 100%;
+        right: 0;
+    }
+}
+
+.border-animated-right {
+    display: inline-block;
+    /* Necesario para animar el borde inferior */
+    position: relative;
+    /* Necesario para el pseudoelemento */
+}
+
+.border-animated-right::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    /* Ajusta el grosor del borde */
+    background-color: #01c38d;
+    /* Color del borde */
+    animation: border-expand-right-to-left 2s ease-in-out forwards;
+    /* Duración y tipo de animación */
 }
