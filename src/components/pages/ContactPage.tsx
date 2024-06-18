@@ -51,7 +51,7 @@ export default function ContactPage() {
       <div className='flex w-full justify-center'>
         <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-lg w-1/2 max-w-lg">
           <div className="mb-4">
-            <label htmlFor="name" className="block text-black font-semibold mb-2">Name</label>
+            <label htmlFor="name" className="block text-black font-semibold mb-2">Name <span className='text-red-500'>*</span></label>
             <input
               type="text"
               id="name"
@@ -63,7 +63,7 @@ export default function ContactPage() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-black font-semibold mb-2">Email</label>
+            <label htmlFor="email" className="block text-black font-semibold mb-2" >Email <span className='text-red-500'>*</span></label>
             <input
               type="email"
               id="email"
@@ -75,7 +75,7 @@ export default function ContactPage() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block text-black font-semibold mb-2">Message</label>
+            <label htmlFor="message" className="block text-black font-semibold mb-2">Message <span className='text-red-500'>*</span></label>
             <textarea
               id="message"
               name="message"
@@ -90,7 +90,7 @@ export default function ContactPage() {
               type="submit"
               className="bg-[#01c38d] text-white p-2 rounded-md hover:bg-[#00a377] transition duration-300"
             >
-              Send
+              Send message
             </button>
           </div>
           {status && <p className="text-center mt-4">{status}</p>}

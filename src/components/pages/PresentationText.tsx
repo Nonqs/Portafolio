@@ -23,7 +23,7 @@ export default function PresentationText() {
     
 
     return (
-        <div className='flex flex-col items-center mt-40'>
+        <div className='flex flex-col items-center mt-52'>
             <span className="text-[#01c38d] font-semibold text-2xl">Hello there, I am</span>
             <span className='text-black font-extrabold text-3xl'>Tomas Trujillo</span>
             <article className='relative h-10 w-full flex justify-center items-center'>

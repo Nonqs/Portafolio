@@ -5,6 +5,8 @@ interface Img {
 
 export interface Project {
     name: string
+    web?: string
+    github?: string
     description: string
     technologies: Img[]
 }

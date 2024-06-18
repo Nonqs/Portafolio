@@ -19,3 +19,7 @@
 ::-webkit-scrollbar-track {
     background: #f9f9f9;
 } */
+
+html {
+    scroll-behavior: smooth;
+}

@@ -34,7 +34,7 @@ function App() {
     <>
       <Background />
 
-      <section className="flex flex-col h-[100vh] items-center justify-between">
+      <section id='main' className="flex flex-col h-[100vh] items-center justify-between">
         <PresentationText />
         <Navbar isSticky={isSticky} />
         <article className='mb-5 mt-52 animate-bounce'>
@@ -44,7 +44,7 @@ function App() {
         </article>
       </section>
 
-      <section ref={aboutRef} className='h-[90vh] w-full flex flex-col justify-center items-center bg-gray-200' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
+      <section id='about' ref={aboutRef} className='h-[90vh] w-full flex flex-col justify-center items-center bg-gray-200' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
         <div className='container'>
           <h2 className={`text-[#01c38d] text-center mb-10 text-4xl font-bold p-2 border-animated w-full ${isVisible ? 'animate-border' : ''}`}>About Me</h2>
         </div>
@@ -54,13 +54,13 @@ function App() {
         </div>
       </section>
 
-      <section className='h-auto'>
+      <section id='projects' className='h-auto'>
         <div className='w-full flex justify-center mt-10'>
           <Projects />
         </div>
       </section>
 
-      <section className='h-[100vh]  bg-gray-200 ' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
+      <section id='contact' className='h-[100vh]  bg-gray-200 ' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
         <div className='w-full flex justify-center mt-10'>
           <ContactPage />
         </div>
