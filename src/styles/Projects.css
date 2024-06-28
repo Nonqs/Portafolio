@@ -24,11 +24,11 @@
 
 @media (max-width: 500px) {
   .swiper_container {
-    height: 50rem; /* Ajusta la altura para dispositivos móviles */
+    height: fit-content; /* Ajusta la altura para dispositivos móviles */
   }
   .swiper-slide {
-    width: 35rem !important; /* Ajusta el ancho para dispositivos móviles */
-    height: 40rem !important; /* Ajusta la altura para dispositivos móviles */
+    width: fit-content !important; /* Ajusta el ancho para dispositivos móviles */
+    height: 15rem !important; /* Ajusta la altura para dispositivos móviles */
   }
   .swiper-slide img {
     width: 100% !important;
@@ -120,5 +120,5 @@
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--primary);
+  background: #01c38d;
 }

@@ -31,7 +31,7 @@ function App() {
   }, [])
 
   return (
-    <>
+    <main className='font-titillium-web'>
       <Background />
 
       <section id='main' className="flex flex-col h-[100vh] items-center justify-between">
@@ -46,11 +46,11 @@ function App() {
         </a>
       </section>
 
-      <section id='about' ref={aboutRef} className='h-[100vh] w-full flex flex-col justify-center items-center bg-gray-200' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
-        <div className='container'>
-          <h2 className={`text-[#01c38d] text-center mb-10 text-4xl font-bold p-2 border-animated w-full ${isVisible ? 'animate-border' : ''}`}>About Me</h2>
+      <section id='about' ref={aboutRef} className='lg:h-[100vh] py-2 w-full flex flex-col justify-center items-center bg-gray-200' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
+        <div className='container flex justify-center md:justify-normal'>
+          <h2 className={`text-[#01c38d] text-center md:mb-10 text-2xl md:text-4xl font-bold p-2 border-animated w-4/5 md:w-full ${isVisible ? 'animate-border' : ''}`}>About Me</h2>
         </div>
-        <div className="flex w-full justify-center">
+        <div className="flex flex-col md:flex-row w-full justify-center">
           <About />
           <Stack />
         </div>
@@ -62,12 +62,12 @@ function App() {
         </div>
       </section>
 
-      <section id='contact' className='h-[100vh]  bg-gray-200 ' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
+      <section id='contact' className='md:h-[100vh]  bg-gray-200 ' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
         <div className='w-full flex justify-center mt-10'>
           <ContactPage />
         </div>
       </section>
-    </>
+    </main>
   );
 }
 

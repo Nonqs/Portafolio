@@ -38,34 +38,38 @@ export default function Stack() {
     const learningNowSvgs: Svg[] = [{ svg: mongo }, { svg: java }]
 
     return (
-        <div ref={stackRef} className="w-1/3 ms-5">
-            <div className="h-3/4">
-                <h5 className={`text-[#01c38d] text-4xl mb-2 font-semibold p-2 border-animated-right w-full ${isVisible ? 'animate-border-right' : ''}`}>
+        <div ref={stackRef} className="w-full md:w-1/3 mt-5 md:mt-0 md:ms-5 ">
+            <div className="h-3/4 w-full flex flex-col items-center justify-center">
+                <h5 className={`text-[#01c38d] text-xl md:text-4xl mb-2 font-semibold p-2 border-animated-right w-2/3 md:w-full text-center md:text-left ${isVisible ? 'animate-border-right' : ''}`}>
                     My stack
                 </h5>
-                <div className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center" style={{ border: "white 1px solid" }}>
-                    <span className='mb-1 font-medium'>Lenguages</span>
-                    <TechBaul isVisible={isVisible} svgs={lenguages} />
-                </div>
-                <div className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center" style={{ border: "white 1px solid" }}>
-                    <span className='mb-1 font-medium'>Frameworks and Libraries</span>
-                    <TechBaul isVisible={isVisible} svgs={frameworksAndLibraries} />
-                </div>
-                <div className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center" style={{ border: "white 1px solid" }}>
-                    <span className='mb-1 font-medium'>Tools, Cloud and Providers</span>
-                    <article className={`flex flex-wrap ${isVisible ? 'animate-fade-in' : ''}`}>
-                        <TechBaul isVisible={isVisible} svgs={tools} />
-                    </article>
+                <div className="flex flex-col justify-center items-center">
+                    <div className="rounded-xl shadow-inner md:p-1 mb-1 flex flex-col items-center w-4/5 md:w-full" style={{ border: "white 1px solid" }}>
+                        <span className='mb-1 font-medium text-xs md:text-base'>Lenguages</span>
+                        <TechBaul isVisible={isVisible} svgs={lenguages} />
+                    </div>
+                    <div className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center w-4/5 md:w-full" style={{ border: "white 1px solid" }}>
+                        <span className='mb-1 font-medium text-xs md:text-base'>Frameworks and Libraries</span>
+                        <TechBaul isVisible={isVisible} svgs={frameworksAndLibraries} />
+                    </div>
+                    <div className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center w-4/5 md:w-full" style={{ border: "white 1px solid" }}>
+                        <span className='mb-1 font-medium text-xs md:text-base'>Tools, Cloud and Providers</span>
+                        <article className={`flex flex-wrap ${isVisible ? 'animate-fade-in' : ''}`}>
+                            <TechBaul isVisible={isVisible} svgs={tools} />
+                        </article>
+                    </div>
                 </div>
             </div>
-            <div className="h-1/4">
-                <h5 className={`text-[#01c38d] text-4xl mb-2 font-semibold p-2 border-animated-right w-full ${isVisible ? 'animate-border-right' : ''}`}>
+            <div className="h-1/4 flex flex-col items-center justify-center">
+                <h5 className={`text-[#01c38d] text-xl md:text-4xl mb-2 font-semibold p-2 border-animated-right w-2/3 md:w-full text-center md:text-left ${isVisible ? 'animate-border-right' : ''}`}>
                     Learning now
                 </h5>
-                <div className="rounded-xl shadow-inner p-1 mb-1 flex justify-center" style={{ border: "white 1px solid" }}>
-                    <article className={`flex flex-wrap ${isVisible ? 'animate-fade-in' : ''}`}>
-                        <TechBaul isVisible={isVisible} svgs={learningNowSvgs} />
-                    </article>
+                <div className="w-full flex justify-center items-center">
+                    <div className="rounded-xl shadow-inner p-1 mb-1 flex justify-center w-4/5 md:w-full" style={{ border: "white 1px solid" }}>
+                        <article className={`flex flex-wrap ${isVisible ? 'animate-fade-in' : ''}`}>
+                            <TechBaul isVisible={isVisible} svgs={learningNowSvgs} />
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useIntersectionObserver } from "../../hook/IntersectionObserver";
-import ProjectAnimation from "../utils/ProjectAnimation";
+import ProjectAnimation from "../utils/ProjectSlider";
 import { Project } from "../../types/types";
 
 import css from "../../public/svgs/css.svg"
@@ -56,9 +56,9 @@ export default function Projects() {
 
     return (
         <div ref={projectsRef} className="container flex flex-col items-center justify-center">
-            <h4 className={`text-[#01c38d] text-center mb-10 text-4xl font-bold p-2 border-animated w-full ${isVisible ? 'animate-border' : ''}`}>
+            <h2 className={`text-[#01c38d] text-center md:mb-10 text-2xl md:text-4xl font-bold p-2 border-animated w-4/5 md:w-full ${isVisible ? 'animate-border' : ''}`}>
                 Projects
-            </h4>
+            </h2>
             <div className="h-auto w-full mt-10">
                 <ProjectAnimation projects={projects} />
             </div>

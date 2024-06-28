@@ -23,7 +23,7 @@ export default function ProjectAnimation({ projects }: { projects: Project[] }) 
    return (
       <section ref={projectRef}>
          {projects.map((project, index) => (
-            <div key={index} className={`flex justify-center mb-20 h-[80h] rounded-xl drop-shadow-2xl backdrop-blur-sm  ${isVisible ? ("animate-fade-in") : ("opacity-0")}`} style={{ borderTop: "#01c38d 8px solid" }}>
+            <div key={index} className={`flex flex-col overflow-hidden xl:flex-row justify-center mb-20 h-[80h] rounded-xl drop-shadow-2xl backdrop-blur-sm py-2 lg:py-0 ${isVisible ? ("animate-fade-in") : ("opacity-0")}`} style={{ borderTop: "#01c38d 8px solid" }}>
                <Background />
                {project.github &&
                   (
@@ -41,7 +41,7 @@ export default function ProjectAnimation({ projects }: { projects: Project[] }) 
                         </div>
                      </a>
                   )}
-               <div className='flex w-4/7'>
+               <div className='flex w-4/7 mt-16 lg:mt-0'>
                   <div className="animationContainer">
                      <Swiper
                         effect={'coverflow'}
@@ -69,15 +69,15 @@ export default function ProjectAnimation({ projects }: { projects: Project[] }) 
                               <img className='w-[40rem] shadow-xl' src={tech.svg} alt={tech.alt}/>
                            </SwiperSlide>
                         ))}
-                        <div className="slider-controler">
+                        <div className="slider-controler mt-14 lg:mt-0">
                            <div className="swiper-pagination"></div>
                         </div>
                      </Swiper>
                   </div>
                </div>
-               <div className='w-3/7 h-full flex flex-col mt-10 ms-10 me-10'>
+               <div className='w-3/7 h-full flex flex-col  mt-0 lg:mt-10 ms-10 me-10'>
                   <article className='flex flex-col mb-5'>
-                     <h4 className={`text-[#01c38d] mb-2 text-4xl font-semibold p-2 border-animated-right ${isVisible ? 'animate-border-right' : ''}`}>
+                     <h4 className={`text-[#01c38d] mb-2 text-xl md:text-4xl font-semibold p-2 border-animated-right text-center md:text-left ${isVisible ? 'animate-border-right' : ''}`}>
                         {project.name}
                      </h4>
                      <span dangerouslySetInnerHTML={{ __html: project.description }}></span>

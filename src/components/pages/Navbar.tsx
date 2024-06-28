@@ -1,6 +1,6 @@
 export default function Navbar({ isSticky }) {
     return (
-        <nav className={`w-2/3 h-[10vh] bg-gray-100 drop-shadow-2xl rounded-xl flex items-center justify-around ${isSticky ? 'fixed top-0 z-50 mt-5' : 'z-50'} navbar-transition`}>
+        <nav className={`w-full md:w-2/3 h-[10vh] bg-gray-100 drop-shadow-2xl rounded-xl flex items-center justify-around ${isSticky ? 'fixed top-0 z-50 md:mt-5' : 'z-50'} navbar-transition`}>
             <a href="#main">
             <h2 className="text-2xl font-extrabold">{"<Tt />"}</h2>
             </a>

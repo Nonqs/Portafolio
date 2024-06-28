@@ -28,10 +28,10 @@ export default function PresentationText() {
             <span className='text-black font-extrabold text-3xl'>Tomas Trujillo</span>
             <article className='relative h-10 w-full flex justify-center items-center'>
                 {spanSelector === 1 &&
-                    <span className='text-[#01c38d] font-semibold text-2xl block font-mono whitespace-nowrap border-r-4 animate-span'>Your Backend Dev</span>
+                    <span className='text-[#01c38d] text-2xl block font-mono whitespace-nowrap border-r-4 animate-span'>Your Next Backend Dev</span>
                 }
                 {spanSelector === 2 &&
-                    <span className='text-[#01c38d] text-2xl block font-mono whitespace-nowrap border-r-4 w-[18ch] animate-span2'>Your Fullstack Dev</span>
+                    <span className='text-[#01c38d] text-2xl block font-mono whitespace-nowrap border-r-4 w-[18ch] animate-span2'>Your Next Fullstack Dev</span>
                 }
                 {spanSelector === 3 &&
                     <span className='text-[#01c38d] text-2xl block font-mono whitespace-nowrap border-r-4 w-[28ch] animate-span3'>Your Next Software Developer</span>

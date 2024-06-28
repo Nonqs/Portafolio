@@ -48,13 +48,13 @@ export default function ContactPage() {
 
   return (
     <section ref={contactRef} className="container flex flex-col items-center justify-center">
-      <h2 className={`text-[#01c38d] text-center mb-10 text-4xl font-bold p-2 border-animated w-full ${isVisible ? 'animate-border' : ''}`}>Contact Me</h2>
-      <div className='flex w-full justify-center'>
-        <div className='w-1/2 flex justify-center items-center'>
+      <h2 className={`text-[#01c38d] text-center mb-10 text-2xl md:text-4xl font-bold p-2 border-animated w-4/5 md:w-full ${isVisible ? 'animate-border' : ''}`}>Contact Me</h2>
+      <div className='flex flex-col md:flex-row w-full justify-center'>
+        <div className='w-full md:w-1/2 flex justify-center items-center'>
           <div className="box flex justify-center items-center rounded-xl w-2/3">
             <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-lg w-full">
               <div className="mb-4">
-                <label htmlFor="name" className="block text-black font-semibold mb-2">Name <span className='text-red-500'>*</span></label>
+                <label htmlFor="name" className="block text-black font-semibold text-xs md:text-base mb-2">Name <span className='text-red-500'>*</span></label>
                 <input
                   type="text"
                   id="name"
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-black font-semibold mb-2" >Email <span className='text-red-500'>*</span></label>
+                <label htmlFor="email" className="block text-black text-xs md:text-base font-semibold mb-2" >Email <span className='text-red-500'>*</span></label>
                 <input
                   type="email"
                   id="email"
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="message" className="block text-black font-semibold mb-2">Message <span className='text-red-500'>*</span></label>
+                <label htmlFor="message" className="block text-black text-xs md:text-base font-semibold mb-2">Message <span className='text-red-500'>*</span></label>
                 <textarea
                   id="message"
                   name="message"
@@ -91,7 +91,7 @@ export default function ContactPage() {
               <div className="flex items-center justify-center">
                 <button
                   type="submit"
-                  className="bg-[#01c38d] text-white p-2 rounded-md hover:bg-[#00a377] transition duration-300"
+                  className="bg-[#01c38d] text-xs md:text-base text-white p-2 rounded-md hover:bg-[#00a377] transition duration-300"
                 >
                   Send message
                 </button>
@@ -100,27 +100,27 @@ export default function ContactPage() {
             </form>
           </div>
         </div>
-        <div className='w-1/2 h-full flex items-center justify-center'>
+        <div className='w-full md:w-1/2 h-full mt-10 md:mt-10 flex items-center justify-center'>
           <div className='flex flex-col justify-evenly h-full'>
             <article className='flex items-center'>
               <img src={email} alt="" className='p-2 w-16 bg-white rounded-xl shadow-lg max-w-lg me-5 hover:drop-shadow-2xl transform hover:scale-110 transition-transform duration-200 ease-in-out' />
-              <div className='flex flex-col'>
-                <span className='font-semibold'>Email</span>
-                <span className='font-thin'>tomastrujillogz@gmail.com</span>
+              <div className='flex flex-col my-5 md:my-0'>
+                <span className='font-semibold text-xs md:text-base'>Email</span>
+                <span className='font-thin text-xs md:text-base'>tomastrujillogz@gmail.com</span>
               </div>
             </article>
             <article className='flex items-center'>
               <img src={telephone} alt="" className='p-2 w-16 bg-white rounded-xl shadow-lg max-w-lg me-5 hover:drop-shadow-2xl transform hover:scale-110 transition-transform duration-200 ease-in-out' />
-              <div className='flex flex-col'>
-                <span className='font-semibold'>Telephone</span>
-                <span className='font-thin'>+34 619640313</span>
+              <div className='flex flex-col my-5 md:my-0'>
+                <span className='font-semibold text-xs md:text-base'>Telephone</span>
+                <span className='font-thin text-xs md:text-base'>+34 619640313</span>
               </div>
             </article>
             <article className='flex items-center'>
               <img src={github} alt="" className='p-2 w-16 bg-white rounded-xl shadow-lg max-w-lg me-5 hover:drop-shadow-2xl transform hover:scale-110 transition-transform duration-200 ease-in-out' />
-              <div className='flex flex-col'>
-                <span className='font-semibold'>Github</span>
-                <span className='font-thin'>@Nonqs</span>
+              <div className='flex flex-col my-5 md:my-0'>
+                <span className='font-semibold text-xs md:text-base'>Github</span>
+                <span className='font-thin text-xs md:text-base'>@Nonqs</span>
               </div>
             </article>
           </div>
