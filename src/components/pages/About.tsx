@@ -14,7 +14,7 @@ export default function About() {
                     Find out who you are hiring
                 </h4>
                 <p className={`${isVisible ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'} mb-2`}>
-                    I'm Tomas Trujillo, a full stack developer passionate about learning and embracing challenges. My main focus is on backend development, and I usually work with TypeScript, React, and NestJS.
+                    I'm Tomas Trujillo, a fullstack developer passionate about learning and embracing challenges. My main focus is on backend development, and I usually work with TypeScript, React, and NestJS.
                 </p>
                 <p className={`${isVisible ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'} mb-2`}>
                     One quality that stands out about me is my ability to be self-taught This philosophy of effort and continuous learning drives me to achieve my goals without getting stuck. I am currently pursuing a degree in Computer Engineering, which further solidifies my commitment to this field.

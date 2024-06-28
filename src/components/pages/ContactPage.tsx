@@ -1,9 +1,10 @@
 import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useIntersectionObserver } from '../../hook/IntersectionObserver';
-import email from "../../public/email.svg"
-import telephone from "../../public/telephone.svg"
-import github from "../../public/github.svg"
+import email from "../../public/svgs/email.svg"
+import telephone from "../../public/svgs/telephone.svg"
+import github from "../../public/svgs/github.svg"
+import "../../styles/Contact.css"
 
 export default function ContactPage() {
 
@@ -46,55 +47,59 @@ export default function ContactPage() {
   }
 
   return (
-    <div ref={contactRef} className="container flex flex-col items-center justify-center">
+    <section ref={contactRef} className="container flex flex-col items-center justify-center">
       <h2 className={`text-[#01c38d] text-center mb-10 text-4xl font-bold p-2 border-animated w-full ${isVisible ? 'animate-border' : ''}`}>Contact Me</h2>
       <div className='flex w-full justify-center'>
-        <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-lg w-1/2 max-w-lg">
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-black font-semibold mb-2">Name <span className='text-red-500'>*</span></label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md"
-              required
-            />
+        <div className='w-1/2 flex justify-center items-center'>
+          <div className="box flex justify-center items-center rounded-xl w-2/3">
+            <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-lg w-full">
+              <div className="mb-4">
+                <label htmlFor="name" className="block text-black font-semibold mb-2">Name <span className='text-red-500'>*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-black font-semibold mb-2" >Email <span className='text-red-500'>*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="message" className="block text-black font-semibold mb-2">Message <span className='text-red-500'>*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded-md h-32"
+                  required
+                />
+              </div>
+              <div className="flex items-center justify-center">
+                <button
+                  type="submit"
+                  className="bg-[#01c38d] text-white p-2 rounded-md hover:bg-[#00a377] transition duration-300"
+                >
+                  Send message
+                </button>
+              </div>
+              {status && <p className="text-center mt-4">{status}</p>}
+            </form>
           </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-black font-semibold mb-2" >Email <span className='text-red-500'>*</span></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-black font-semibold mb-2">Message <span className='text-red-500'>*</span></label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md h-32"
-              required
-            />
-          </div>
-          <div className="flex items-center justify-center">
-            <button
-              type="submit"
-              className="bg-[#01c38d] text-white p-2 rounded-md hover:bg-[#00a377] transition duration-300"
-            >
-              Send message
-            </button>
-          </div>
-          {status && <p className="text-center mt-4">{status}</p>}
-        </form>
+        </div>
         <div className='w-1/2 h-full flex items-center justify-center'>
           <div className='flex flex-col justify-evenly h-full'>
             <article className='flex items-center'>
@@ -121,6 +126,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

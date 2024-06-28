@@ -9,6 +9,7 @@ export interface Project {
     github?: string
     description: string
     technologies: Img[]
+    images: Img[]
 }
 
 export interface Svg {

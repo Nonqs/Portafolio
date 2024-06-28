@@ -1,24 +1,25 @@
-import css from "../../public/css.svg"
-import html from "../../public/html.svg"
-import js from "../../public/js.svg"
-import bootstrap from "../../public/bootstrap.svg"
-import express from "../../public/express.svg"
-import git from "../../public/git.svg"
-import github from "../../public/github.svg"
-import mongo from "../../public/mongo.svg"
-import mysql from "../../public/mysql.svg"
-import prisma from "../../public/prisma.svg"
-import ts from "../../public/ts.svg"
-import tailwind from "../../public/tailwind.svg"
-import vercel from "../../public/vercel.svg"
-import vscode from "../../public/vscode.svg"
-import nest from "../../public/nestjs.svg"
-import next from "../../public/next.svg"
-import nodejs from "../../public/nodejs.svg"
-import react from "../../public/react.svg"
-import insomnia from "../../public/insomnia.svg"
-import sql from "../../public/sql.svg"
-import java from "../../public/java.svg"
+import css from "../../public/svgs/css.svg"
+import html from "../../public/svgs/html.svg"
+import js from "../../public/svgs/js.svg"
+import bootstrap from "../../public/svgs/bootstrap.svg"
+import express from "../../public/svgs/express.svg"
+import git from "../../public/svgs/git.svg"
+import github from "../../public/svgs/github.svg"
+import mongo from "../../public/svgs/mongo.svg"
+import mysql from "../../public/svgs/mysql.svg"
+import prisma from "../../public/svgs/prisma.svg"
+import ts from "../../public/svgs/ts.svg"
+import tailwind from "../../public/svgs/tailwind.svg"
+import vercel from "../../public/svgs/vercel.svg"
+import vscode from "../../public/svgs/vscode.svg"
+import nest from "../../public/svgs/nestjs.svg"
+import next from "../../public/svgs/next.svg"
+import nodejs from "../../public/svgs/nodejs.svg"
+import react from "../../public/svgs/react.svg"
+import insomnia from "../../public/svgs/insomnia.svg"
+import sql from "../../public/svgs/sql.svg"
+import java from "../../public/svgs/java.svg"
+import vite from "../../public/svgs/vite-svgrepo-com.svg"
 import { useRef } from "react"
 import "../../styles/About.css"
 import { useIntersectionObserver } from '../../hook/IntersectionObserver';
@@ -33,7 +34,7 @@ export default function Stack() {
 
     const lenguages: Svg[] = [{ svg: css }, { svg: html }, { svg: js }, { svg: ts }, { svg: nodejs }, { svg: sql }]
     const frameworksAndLibraries: Svg[] = [{ svg: react }, { svg: next }, { svg: express }, { svg: nest }, { svg: tailwind }, { svg: bootstrap }, { svg: prisma }]
-    const tools: Svg[] = [{ svg: mysql }, { svg: git }, { svg: github }, { svg: vscode }, { svg: insomnia }, { svg: vercel }]
+    const tools: Svg[] = [{ svg: mysql }, { svg: git }, { svg: github }, { svg: vite }, { svg: vscode }, { svg: insomnia }, { svg: vercel }]
     const learningNowSvgs: Svg[] = [{ svg: mongo }, { svg: java }]
 
     return (
