@@ -113,7 +113,7 @@ export default function ContactPage() {
               <img src={telephone} alt="" className='p-2 w-16 bg-white rounded-xl shadow-lg max-w-lg me-5 hover:drop-shadow-2xl transform hover:scale-110 transition-transform duration-200 ease-in-out' />
               <div className='flex flex-col'>
                 <span className='font-semibold'>Telephone</span>
-                <span className='font-thin'>No habemus</span>
+                <span className='font-thin'>+34 619640313</span>
               </div>
             </article>
             <article className='flex items-center'>

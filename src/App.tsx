@@ -46,7 +46,7 @@ function App() {
         </a>
       </section>
 
-      <section id='about' ref={aboutRef} className='h-[90vh] w-full flex flex-col justify-center items-center bg-gray-200' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
+      <section id='about' ref={aboutRef} className='h-[100vh] w-full flex flex-col justify-center items-center bg-gray-200' style={{ borderTop: "#01c38d 8px solid", borderBottom: "#01c38d 8px solid" }}>
         <div className='container'>
           <h2 className={`text-[#01c38d] text-center mb-10 text-4xl font-bold p-2 border-animated w-full ${isVisible ? 'animate-border' : ''}`}>About Me</h2>
         </div>
