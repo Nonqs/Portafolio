@@ -1,50 +1,48 @@
-import { useRef, useState } from 'react';
+import { ChangeEvent, FormEvent, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { useIntersectionObserver } from '../../hook/IntersectionObserver';
-import email from "../../public/svgs/email.svg"
-import telephone from "../../public/svgs/telephone.svg"
-import github from "../../public/svgs/github.svg"
-import "../../styles/Contact.css"
+import email from "../../public/svgs/email.svg";
+import telephone from "../../public/svgs/telephone.svg";
+import github from "../../public/svgs/github.svg";
+import "../../styles/Contact.css";
 
 export default function ContactPage() {
 
-  const contactRef = useRef<HTMLDivElement>(null)
-  const isVisible = useIntersectionObserver(contactRef)
+  const contactRef = useRef<HTMLDivElement>(null);
+  const isVisible = useIntersectionObserver(contactRef);
 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: ''
-  })
+  });
 
-  const [status, setStatus] = useState('')
+  const [status, setStatus] = useState('');
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-    const serviceID = process.env.SERVICE_ID
-    const templateID = process.env.TEMPLATE_ID
-    const userID = process.env.USER_ID
+    const serviceID = process.env.SERVICE_ID;
+    const templateID = process.env.TEMPLATE_ID;
+    const userID = process.env.USER_ID;
 
     if (serviceID && templateID && userID) {
-
       emailjs.send(serviceID, templateID, formData, userID)
         .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
           setStatus('Message sent successfully!');
-        }, (err) => {
+        })
+        .catch((err) => {
           console.error('FAILED...', err);
           setStatus('Failed to send message. Please try again.');
-        })
-
+        });
     }
-
-  }
+  };
 
   return (
     <section ref={contactRef} className="container flex flex-col items-center justify-center">
@@ -66,7 +64,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-black text-xs md:text-base font-semibold mb-2" >Email <span className='text-red-500'>*</span></label>
+                <label htmlFor="email" className="block text-black text-xs md:text-base font-semibold mb-2">Email <span className='text-red-500'>*</span></label>
                 <input
                   type="email"
                   id="email"
