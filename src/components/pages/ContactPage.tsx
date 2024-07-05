@@ -116,7 +116,7 @@ export default function ContactPage() {
             </article>
             <article className='flex items-center'>
               <img src={github} alt="" className='p-2 w-16 bg-white rounded-xl shadow-lg max-w-lg me-5 hover:drop-shadow-2xl transform hover:scale-110 transition-transform duration-200 ease-in-out' />
-              <div className='flex flex-col my-5 md:my-0'>
+              <div className='flex flex-col my-5 md:my-0 mb-5 md:mb-0'>
                 <span className='font-semibold text-xs md:text-base'>Github</span>
                 <span className='font-thin text-xs md:text-base'>@Nonqs</span>
               </div>

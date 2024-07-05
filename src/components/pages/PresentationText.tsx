@@ -25,7 +25,7 @@ export default function PresentationText() {
     return (
         <div className='flex flex-col items-center mt-52'>
             <span className="text-[#01c38d] font-semibold text-2xl">Hello there, I am</span>
-            <span className='text-black font-extrabold text-3xl'>Tomas Trujillo</span>
+            <h1 className='text-black font-extrabold text-3xl'>Tomas Trujillo</h1>
             <article className='relative h-10 w-full flex justify-center items-center'>
                 {spanSelector === 1 &&
                     <span className='text-[#01c38d] text-2xl block font-mono whitespace-nowrap border-r-4 animate-span'>Your Next Backend Dev</span>
