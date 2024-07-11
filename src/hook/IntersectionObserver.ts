@@ -1,6 +1,8 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 
-export function useIntersectionObserver(elementRef: React.MutableRefObject<Element | null>) {
+export function useIntersectionObserver(
+  elementRef: React.MutableRefObject<Element | null>
+) {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
@@ -10,8 +12,8 @@ export function useIntersectionObserver(elementRef: React.MutableRefObject<Eleme
       },
       {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.1
+        rootMargin: "0px",
+        threshold: 0.1,
       }
     );
 
