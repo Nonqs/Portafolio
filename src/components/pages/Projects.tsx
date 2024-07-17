@@ -11,6 +11,8 @@ import tailwind from "../../public/svgs/tailwind.svg";
 import next from "../../public/svgs/next.svg";
 import react from "../../public/svgs/react.svg";
 import vite from "../../public/svgs/vite-svgrepo-com.svg";
+import nest from "../../public/svgs/nestjs.svg";
+import mongo from "../../public/svgs/mongo.svg";
 
 import fin1 from "../../public/imgs/fin-1.webp";
 import fin2 from "../../public/imgs/fin-2.webp";
@@ -23,6 +25,8 @@ import subs1 from "../../public/imgs/subs1.webp";
 import subs2 from "../../public/imgs/subs2.webp";
 import subs3 from "../../public/imgs/subs3.webp";
 import subs4 from "../../public/imgs/subs4.webp";
+import chat1 from "../../public/imgs/chat.webp";
+import chat2 from "../../public/imgs/chat2.webp";
 
 export default function Projects() {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -83,6 +87,25 @@ export default function Projects() {
         { svg: math1, alt: "img1" },
         { svg: math2, alt: "img1" },
         { svg: math3, alt: "img1" },
+      ],
+    },
+    {
+      name: "NestChat",
+      github: "https://github.com/Nonqs/realtime-chat",
+      description:
+        "NestChat is a real-time chat application built using NestJS and Socket.io.",
+      technologies: [
+        { svg: vite, alt: "vite logo" },
+        { svg: ts, alt: "ts logo" },
+        { svg: react, alt: "sql" },
+        { svg: css, alt: "java" },
+        { svg: tailwind, alt: "tailwind" },
+        { svg: nest, alt: "nest" },
+        { svg: mongo, alt: "mongo" },
+      ],
+      images: [
+        { svg: chat1, alt: "img1" },
+        { svg: chat2, alt: "img2" },
       ],
     },
   ];
