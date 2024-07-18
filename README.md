@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# Math.simple
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Math.simple is a math problem generator designed to help those who want to practice exercises without having to search through numerous worksheets that lack answers or ways to validate their results.
 
-Currently, two official plugins are available:
+## Deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visit the Math.simple website!
 
-## Expanding the ESLint configuration
+[mathsimple.netlify.app](https://mathsimple.netlify.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+**Client:** React, Vite
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Features
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Math Problem Generation:** Create custom math problems for different skill levels.
+- **Result Validation:** Provides answers so users can check their solutions.
+- **Intuitive User Interface:** Designed to be user-friendly, offering a smooth learning experience.
+
+## Local Installation
+
+To run Math.simple locally, follow these steps:
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/math-simple.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd math-simple
+    ```
+
+3. Install the dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. Start the application:
+
+    ```bash
+    npm run dev
+    ```
+
+    The application will be available at `http://localhost:3000`.
+
+## Contributing
+
+Contributions are welcome. To contribute, follow these steps:
+
+ 1. Fork the project.
+ 2. Create a new branch with your feature or bugfix: `git  checkout -b my-new-feature`
+ 3. Commit your changes: `git commit -m 'Add new feature'`
+ 4. Push to the remote branch: `git push origin my-new-feature`
+ 5. Open a Pull Request.
+
