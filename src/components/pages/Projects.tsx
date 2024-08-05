@@ -18,15 +18,18 @@ import fin1 from "../../public/imgs/fin-1.webp";
 import fin2 from "../../public/imgs/fin-2.webp";
 import fin3 from "../../public/imgs/fin-3.webp";
 import fin4 from "../../public/imgs/fin-4.webp";
-import math1 from "../../public/imgs/math-1.webp";
-import math2 from "../../public/imgs/math-2.webp";
-import math3 from "../../public/imgs/math-3.webp";
+import math1 from "../../public/imgs/math.webp";
+import math2 from "../../public/imgs/math2.webp";
+import math3 from "../../public/imgs/math3.webp";
+import math4 from "../../public/imgs/math4.webp";
 import subs1 from "../../public/imgs/subs1.webp";
 import subs2 from "../../public/imgs/subs2.webp";
 import subs3 from "../../public/imgs/subs3.webp";
 import subs4 from "../../public/imgs/subs4.webp";
-import chat1 from "../../public/imgs/chat.webp";
+import chat1 from "../../public/imgs/chat1.webp";
 import chat2 from "../../public/imgs/chat2.webp";
+import chat3 from "../../public/imgs/chat3.webp";
+import chat4 from "../../public/imgs/chat4.webp";
 
 export default function Projects() {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -54,26 +57,8 @@ export default function Projects() {
       ],
     },
     {
-      name: "Substancial",
-      description:
-        "Landing page for Substancial restaurant, in which I worked as co-designer and programmer.<br></br>(In development) ",
-      technologies: [
-        { svg: vite, alt: "vite logo" },
-        { svg: ts, alt: "ts logo" },
-        { svg: react, alt: "sql" },
-        { svg: css, alt: "java" },
-        { svg: tailwind, alt: "tailwind logo" },
-      ],
-      images: [
-        { svg: subs2, alt: "img1" },
-        { svg: subs1, alt: "img1" },
-        { svg: subs3, alt: "img1" },
-        { svg: subs4, alt: "img1" },
-      ],
-    },
-    {
       name: "Math.simple",
-      web: "https://mathsimple.netlify.app",
+      web: "https://mathsimple-nonqs-projects.vercel.app/",
       github: "https://github.com/Nonqs/Math.simple",
       description:
         "Math.simple is a math problem generator. It was planned to help people who want to practice exercise and don't want to search through a lot of worksheets that have no answers or ways to validate their results.<br /><br />The project is in demo; it only generates subtraction, additions, multiplications and division, but my plan is to add new features, from powers and roots to matrixes.",
@@ -84,9 +69,10 @@ export default function Projects() {
         { svg: css, alt: "java" },
       ],
       images: [
-        { svg: math1, alt: "img1" },
-        { svg: math2, alt: "img1" },
+        { svg: math4, alt: "img1" },
         { svg: math3, alt: "img1" },
+        { svg: math2, alt: "img1" },
+        { svg: math1, alt: "img1" },
       ],
     },
     {
@@ -104,8 +90,28 @@ export default function Projects() {
         { svg: mongo, alt: "mongo" },
       ],
       images: [
-        { svg: chat1, alt: "img1" },
+        { svg: chat3, alt: "img1" },
         { svg: chat2, alt: "img2" },
+        { svg: chat1, alt: "img2" },
+        { svg: chat4, alt: "img2" },
+      ],
+    },
+    {
+      name: "Substancial",
+      description:
+        "Landing page for Substancial restaurant, in which I worked as co-designer and programmer.<br></br>(In development) ",
+      technologies: [
+        { svg: vite, alt: "vite logo" },
+        { svg: ts, alt: "ts logo" },
+        { svg: react, alt: "sql" },
+        { svg: css, alt: "java" },
+        { svg: tailwind, alt: "tailwind logo" },
+      ],
+      images: [
+        { svg: subs2, alt: "img1" },
+        { svg: subs1, alt: "img1" },
+        { svg: subs3, alt: "img1" },
+        { svg: subs4, alt: "img1" },
       ],
     },
   ];
