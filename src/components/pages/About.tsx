@@ -60,7 +60,7 @@ export default function About() {
             isVisible ? "animate-border" : ""
           }`}
         >
-          Lenguages
+          Languages
         </h4>
         <div
           className={`w-full flex justify-center ${
