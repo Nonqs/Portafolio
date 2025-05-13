@@ -53,7 +53,7 @@ function App() {
       <section
         id="about"
         ref={aboutRef}
-        className="lg:h-[100vh] py-2 w-full flex flex-col justify-center items-center bg-gray-200"
+        className="py-14 px-14 w-full flex flex-col justify-center items-center bg-slate-50"
         style={{
           borderTop: "#01c38d 8px solid",
           borderBottom: "#01c38d 8px solid",
@@ -82,7 +82,7 @@ function App() {
 
       <section
         id="contact"
-        className="md:h-[100vh]  bg-gray-200 "
+        className="md:h-[100vh]  bg-slate-50 "
         style={{
           borderTop: "#01c38d 8px solid",
           borderBottom: "#01c38d 8px solid",

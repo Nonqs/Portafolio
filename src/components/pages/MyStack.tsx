@@ -20,6 +20,8 @@ import insomnia from "../../public/svgs/insomnia.svg";
 import sql from "../../public/svgs/sql.svg";
 import java from "../../public/svgs/java.svg";
 import vite from "../../public/svgs/vite-svgrepo-com.svg";
+import n8n from "../../public/svgs/n8n.svg";
+import figma from "../../public/svgs/figma.svg";
 import { useRef } from "react";
 import "../../styles/About.css";
 import { useIntersectionObserver } from "../../hook/IntersectionObserver";
@@ -37,6 +39,7 @@ export default function Stack() {
     { svg: ts },
     { svg: nodejs },
     { svg: sql },
+    { svg: java },
   ];
   const frameworksAndLibraries: Svg[] = [
     { svg: react },
@@ -55,42 +58,27 @@ export default function Stack() {
     { svg: vscode },
     { svg: insomnia },
     { svg: vercel },
+    { svg: mongo },
   ];
-  const learningNowSvgs: Svg[] = [{ svg: mongo }, { svg: java }];
+  const learningNowSvgs: Svg[] = [{ svg: figma }, { svg: n8n }];
 
   return (
-    <div ref={stackRef} className="w-full md:w-1/3 mt-5 md:mt-0 md:ms-5 ">
-      <div className="h-3/4 w-full flex flex-col items-center justify-center">
-        <h5
-          className={`text-[#01c38d] text-xl md:text-4xl mb-2 font-semibold p-2 border-animated-right w-2/3 md:w-full text-center md:text-left ${
-            isVisible ? "animate-border-right" : ""
-          }`}
-        >
-          My stack
-        </h5>
+    <div ref={stackRef} className="w-full md:w-1/3 mt-5 md:mt-0 md:ms-5 h-full">
+      <div className=" w-full flex flex-col items-center justify-center">
         <div className="flex flex-col justify-center items-center">
-          <div
-            className="rounded-xl shadow-inner md:p-1 mb-1 flex flex-col items-center w-4/5 md:w-full"
-            style={{ border: "white 1px solid" }}
-          >
+          <div className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center w-4/5 md:w-full bg-gray-200">
             <span className="mb-1 font-medium text-xs md:text-base">
               Lenguages
             </span>
             <TechBaul isVisible={isVisible} svgs={lenguages} />
           </div>
-          <div
-            className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center w-4/5 md:w-full"
-            style={{ border: "white 1px solid" }}
-          >
+          <div className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center w-4/5 md:w-full bg-gray-200">
             <span className="mb-1 font-medium text-xs md:text-base">
               Frameworks and Libraries
             </span>
             <TechBaul isVisible={isVisible} svgs={frameworksAndLibraries} />
           </div>
-          <div
-            className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center w-4/5 md:w-full"
-            style={{ border: "white 1px solid" }}
-          >
+          <div className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center w-4/5 md:w-full bg-gray-200">
             <span className="mb-1 font-medium text-xs md:text-base">
               Tools, Cloud and Providers
             </span>
@@ -100,21 +88,10 @@ export default function Stack() {
               <TechBaul isVisible={isVisible} svgs={tools} />
             </article>
           </div>
-        </div>
-      </div>
-      <div className="h-1/4 flex flex-col items-center justify-center">
-        <h5
-          className={`text-[#01c38d] text-xl md:text-4xl mb-2 font-semibold p-2 border-animated-right w-2/3 md:w-full text-center md:text-left ${
-            isVisible ? "animate-border-right" : ""
-          }`}
-        >
-          Learning now
-        </h5>
-        <div className="w-full flex justify-center items-center">
-          <div
-            className="rounded-xl shadow-inner p-1 mb-1 flex justify-center w-4/5 md:w-full"
-            style={{ border: "white 1px solid" }}
-          >
+          <div className="rounded-xl shadow-inner p-1 mb-1 flex flex-col items-center w-4/5 md:w-full bg-gray-200">
+            <span className="mb-1 font-medium text-xs md:text-base">
+              Learning now
+            </span>
             <article
               className={`flex flex-wrap ${isVisible ? "animate-fade-in" : ""}`}
             >
